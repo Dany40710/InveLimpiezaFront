@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { CanActivate, CanLoad, Router, ActivatedRouteSnapshot, RouterStateSnapshot, Route, UrlSegment } from '@angular/router';
+import { Router, ActivatedRouteSnapshot, RouterStateSnapshot, Route, UrlSegment } from '@angular/router';
 import { Observable, of } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
 import { AuthService } from 'src/app/auth/services/auth/auth.service';
@@ -8,7 +8,7 @@ import { Session } from '../../interfaces/session.interface';
 @Injectable({
   providedIn: 'root'
 })
-export class AdminOrUserGuard implements CanActivate, CanLoad {
+export class AdminOrUserGuard  {
   constructor(private auth: AuthService, private router: Router) {}
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<boolean> {

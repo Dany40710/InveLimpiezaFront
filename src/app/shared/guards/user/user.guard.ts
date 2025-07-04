@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { ActivatedRouteSnapshot, CanActivate, CanLoad, Route, Router, RouterStateSnapshot, UrlSegment, UrlTree } from '@angular/router';
+import { ActivatedRouteSnapshot, Route, Router, RouterStateSnapshot, UrlSegment, UrlTree } from '@angular/router';
 import { map, Observable, of, tap } from 'rxjs';
 import { AuthService } from 'src/app/auth/services/auth/auth.service';
 import { Session } from '../../interfaces/session.interface';
@@ -8,7 +8,7 @@ import { LocalStorageService } from '../../services/local-storage.service';
 @Injectable({
   providedIn: 'root'
 })
-export class UserGuard implements CanActivate, CanLoad {
+export class UserGuard  {
   constructor(
     private auth: AuthService,
     private router: Router,

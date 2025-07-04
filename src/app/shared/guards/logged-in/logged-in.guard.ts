@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { ActivatedRouteSnapshot, CanActivate, CanLoad, Route, Router, RouterStateSnapshot, UrlSegment, UrlTree } from '@angular/router';
+import { ActivatedRouteSnapshot, Route, Router, RouterStateSnapshot, UrlSegment, UrlTree } from '@angular/router';
 import { catchError, map, Observable, of, tap } from 'rxjs';
 import { AuthService } from 'src/app/auth/services/auth/auth.service';
 import { Session } from '../../interfaces/session.interface';
@@ -8,7 +8,7 @@ import { LocalStorageService } from '../../services/local-storage.service';
 @Injectable({
     providedIn: 'root'
 })
-export class LoggedInGuard implements CanActivate, CanLoad {
+export class LoggedInGuard  {
 
 
     constructor(
