@@ -9,6 +9,12 @@ mat-toolbar {
     background-color: lightgray;
 }
 
+mat-icon {
+    color: black;
+  &:hover {
+    color: darkgray;
+  }
+}
 .logo-gobierno {
   height: 100%;
 }
